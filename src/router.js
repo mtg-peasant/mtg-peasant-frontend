@@ -1,50 +1,56 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Banlist from './views/Banlist.vue'
+import Gatherer from './views/Gatherer.vue'
+import Valideck from './views/Valideck.vue'
+import Archetype from './views/Archetype.vue'
+import Article from './views/Article.vue'
+import Decklist from './views/Decklist.vue'
+import Ranking from './views/Ranking.vue'
+import Tierslist from './views/Tierslist.vue'
+import Tournament from './views/Tournament.vue'
+import Forum from './views/Forum.vue'
+import NotFoundComponent from './views/NotFoundComponent.vue'
 
-Vue.use(Router)
-
-export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
+export default 
+  [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '/banlist',
+      component: Banlist,
     },
     {
-      path: '/rule',
-      name: 'rule',
-      component: () => import(/* webpackChunkName: "about" */ './views/Rule.vue')
-    },
-    {
-      path: '/tournament',
-      name: 'tournament',
-      component: () => import(/* webpackChunkName: "about" */ './views/Tournament.vue')
+      path: '/gatherer',
+      component: Gatherer,
     },
     {
       path: '/valideck',
-      name: 'valideck',
-      component: () => import(/* webpackChunkName: "about" */ './views/Valideck.vue')
+      component: Valideck,
     },
     {
-      path: '/search',
-      name: 'search',
-      component: () => import(/* webpackChunkName: "about" */ './views/Search.vue')
+      path: '/archetype',
+      component: Archetype,
+    },
+    {
+      path: '/decklist',
+      component: Decklist,
+    },
+    {
+      path: '/tierslist',
+      component: Tierslist,
+    },
+    {
+      path: '/tournament',
+      component: Tournament,
+    },
+    {
+      path: '/ranking',
+      component: Ranking,
+    },
+    {
+      path: '/article',
+      component: Article,
     },
     {
       path: '/forum',
-      name: 'forum',
-      component: () => import(/* webpackChunkName: "about" */ './views/Forum.vue')
+      component: Forum,
     },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
+    { path: '*', component: NotFoundComponent }
   ]
-})
