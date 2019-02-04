@@ -1,3 +1,3 @@
 <template>
-  <div>Ranking</div>
+  <div>Classements</div>
 </template>

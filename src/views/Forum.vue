@@ -1,3 +1,3 @@
 <template>
-  <div>Forum</div>
+  <div>Forums</div>
 </template>

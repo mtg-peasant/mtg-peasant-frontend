@@ -1,3 +1,3 @@
 <template>
-  <div>Article</div>
+  <div>Articles</div>
 </template>
