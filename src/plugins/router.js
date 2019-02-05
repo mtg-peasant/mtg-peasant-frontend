@@ -10,7 +10,6 @@ import Ranking from '../views/Ranking.vue'
 import Tierslist from '../views/Tierslist.vue'
 import Tournament from '../views/Tournament.vue'
 import Forum from '../views/Forum.vue'
-import Mainpage from '../views/Mainpage.vue'
 import NotFoundComponent from '../views/NotFoundComponent.vue'
 
 export default new VueRouter({
@@ -24,10 +23,6 @@ export default new VueRouter({
         {
             path: '/gatherer',
             component: Gatherer,
-        },
-        {
-            path: '',
-            component: Mainpage,
         },
         {
             path: '/valideck',

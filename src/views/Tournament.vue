@@ -1,3 +1,3 @@
 <template>
-  <div>Tournois</div>
+  <div>Tournament</div>
 </template>
